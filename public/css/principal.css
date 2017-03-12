@@ -47,3 +47,16 @@
 	width: 300px;
 	margin-left: 50px;
 }
+
+.logo_sistema{
+	width: 150px;
+	margin-left: 30px;
+}
+
+.botao_incluir{
+	position: absolute;
+	bottom: -600px;
+	left: 90%;
+	
+	
+}
