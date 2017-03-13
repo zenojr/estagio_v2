@@ -1,12 +1,9 @@
-var express = require('express');
-var app = express();
+var app = require('./config/express')(); //chama arquivo de cfg do express
 
-app.get('/ged', function(req,res){
-	res.send("<html><body><h1>Listagem de arquivos</h1></body></html>");
-});
+var rotasGed = require('./app/routes/login')(app); //sempre lembrar de passar como retorno o app
+
 
 
 app.listen(3000, function(){
 	console.log("V8 Running!!!");	
 });
-
