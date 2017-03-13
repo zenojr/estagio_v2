@@ -53,10 +53,12 @@
 	margin-left: 30px;
 }
 
+
 .botao_incluir{
-	position: absolute;
-	bottom: -600px;
-	left: 90%;
+	position: fixed;
+	
+	float: right;
 	
 	
 }
+

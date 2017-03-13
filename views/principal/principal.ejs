@@ -41,16 +41,80 @@
       <a class="mdl-navigation__link" href="">TI</a>
     </nav>
   </div>
+
   <main class="mdl-layout__content">
-    <div class="page-content">
-    <!-- Your content goes here -->
-    <!-- Colored FAB button with ripple -->
-    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored botao_incluir">
+    <div class="page-content"> 
+        <!-- Colored FAB button with ripple -->
+    <button id="show-dialog"  class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored botao_incluir">
         <i class="material-icons">add</i>
     </button>
-
     </div>
   </main>
+  
+    
+      
+  <dialog class="mdl-dialog">
+    <h4 class="mdl-dialog__title">Cadastro de arquivos</h4>
+    <div class="mdl-dialog__content">
+        <!-- Textfield with Floating Label -->
+
+            <form action="#">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="sample3">
+            <label class="mdl-textfield__label" for="sample3">Título</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="sample3">
+            <label class="mdl-textfield__label" for="sample3">Referência</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input list="diretorio" name="diretorio">
+            <datalist id="diretorio">
+                <option value="Contabilidade" >
+                <option value="RH">
+                <option value="Compras">
+                <option value="TI">
+            </datalist>
+              
+            </div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="sample3">
+            <label class="mdl-textfield__label" for="sample3">Palavras chave</label>
+            </div>
+            <!-- Floating Multiline Textfield -->
+            <div class="mdl-textfield mdl-js-textfield">
+            <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+            <label class="mdl-textfield__label" for="sample5">Descrição</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield">
+            <input type="file" id="Anexar arquivo" name="Anexar">
+            </div>
+        
+
+
+        </form>
+
+    </div>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button">Agree</button>
+      <button type="button" class="mdl-button close">Disagree</button>
+
+  </dialog>
+  <script>
+    var dialog = document.querySelector('dialog');
+    var showDialogButton = document.querySelector('#show-dialog');
+    if (! dialog.showModal) {
+      dialogPolyfill.registerDialog(dialog);
+    }
+    showDialogButton.addEventListener('click', function() {
+      dialog.showModal();
+    });
+    dialog.querySelector('.close').addEventListener('click', function() {
+      dialog.close();
+    });
+  </script>
+
+
 </div>
 
 </main>
