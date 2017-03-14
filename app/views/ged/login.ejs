@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, inictial-scale=1, user-scalable=yes">
-	<title>Moustache GED Zeno</title>
+	<title>Moustache GED</title>
 	<link rel="stylesheet" href="/stylesheets/principal.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	
@@ -22,7 +22,7 @@
 	<div class="form_container">
 
 		<!-- Textfield with Floating Label -->
-		<form>
+		<form id='myForm'>
 		  	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 		    	<input class="mdl-textfield__input" type="text" id="user">
 		    	<label class="mdl-textfield__label" for="user">Login</label>
@@ -35,13 +35,50 @@
 			
 			
 			<!-- Accent-colored raised button with ripple -->
-			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" onsubmit="valida()">
+			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" onclick="valida()">
 	  			Entrar
 			</button>
 			<a href="recuperarsenha.html">Esqueceu a senha?</a>
 		</form>
-	</div>	
+	</div>
+
+	
+
 </main>
-<script src='/javascripts/valida_user'></script>
+
+<script>
+	
+	valida = function(){
+	
+	console.log('chamou!!');
+	var userIn = document.querySelector('#user').value;
+	var senhaIn = document.querySelector('#senha').value;
+	
+	
+	<%for(var i=0;i<lista.length;i++){%>
+		var loginBD ="<%=lista[i].login%>";
+		var senhaBD ="<%=lista[i].senha%>";
+		console.log(loginBD);
+		console.log(senhaBD);
+		
+	<%}%>
+
+	console.log(userIn);
+	console.log(senhaIn);
+	
+	if(userIn == loginBD && senhaIn == senhaBD){
+    	alert("sucesso");
+    	myForm.action='/inicial';
+    	
+
+                        
+    }else{
+    	alert("usuario ou senha invalidos");
+    }
+	
+
+	}	
+
+</script>
 </body>
 </html>
