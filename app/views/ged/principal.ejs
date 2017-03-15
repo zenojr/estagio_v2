@@ -48,7 +48,25 @@
   </div>
 
   <main class="mdl-layout__content">
-    <div class="page-content"> 
+    <div class="page-content">
+    
+      <table>
+            <tr>
+                <td>Diretorio</td>
+                
+            </tr>
+            <% var dir = [lista]; %>
+            <td><% console.log(dir); %></td>
+            
+            <%for(var i=0;i<dir.length;i++) {%>
+                <tr>
+                    <td><%=dir[i]%></td>
+                </tr>
+            <%}%>
+            <tr>
+            </tr>
+        </table>
+
         <!-- Colored FAB button with ripple -->
     <button id="show-dialog"  class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored botao_incluir">
         <i class="material-icons">add</i>
