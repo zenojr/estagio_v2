@@ -1,18 +1,22 @@
 module.exports = function(app){
 	app.get('/inicial', function(req,res){
 		var fs = require('fs');
-		fs.readdir('files/CONTABILIDADE', function(err, files){
-			var pasta = [files];
-
-			res.render('ged/principal', {lista:files});	
+		fs.readdir('./uploads', function(err, files){
+		var pasta = [files];
+		res.render('ged/principal', {pasta:files});
 		});
-		
+
 	});
 
 	app.get('/teste', function(req,res){
 		res.render('ged/teste')
 	});
 }
+
+
+/*Teste de upload*/
+
+
 
 
 /*
@@ -25,6 +29,6 @@ module.exports = function(app){
         console.log(files);
         res.render()
       });
- 
+
 }
 */

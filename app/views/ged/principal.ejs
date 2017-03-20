@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="/stylesheets/principal.css">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    
+
 </head>
 <body>
 
@@ -49,15 +49,15 @@
 
   <main class="mdl-layout__content">
     <div class="page-content">
-    
-      <table>
+
+    <!--  <table>
             <tr>
                 <td>Diretorio</td>
-                
+
             </tr>
-            <% var dir = [lista]; %>
+            <% var dir = [pasta]; %>
             <td><% console.log(dir); %></td>
-            
+
             <%for(var i=0;i<dir.length;i++) {%>
                 <tr>
                     <td><%=dir[i]%></td>
@@ -66,16 +66,16 @@
             <tr>
             </tr>
         </table>
-
+      -->
         <!-- Colored FAB button with ripple -->
     <button id="show-dialog"  class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored botao_incluir">
         <i class="material-icons">add</i>
     </button>
     </div>
   </main>
-  
-    
-      
+
+
+
   <dialog id='modal' class="mdl-dialog">
     <h4 class="mdl-dialog__title">Cadastro de arquivos</h4>
     <div class="mdl-dialog__content">
@@ -98,7 +98,7 @@
                 <option value="Compras">
                 <option value="TI">
             </datalist>
-              
+
             </div>
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input class="mdl-textfield__input" type="text" id="sample3">
@@ -128,7 +128,7 @@
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
   <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input">
               </label>
-              </td>  
+              </td>
 
               <td>
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
@@ -142,7 +142,7 @@
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-4">
   <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input">
               </label>
-              </td>  
+              </td>
 
               <td>
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
@@ -156,7 +156,7 @@
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-4">
   <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input">
               </label>
-              </td>  
+              </td>
 
               <td>
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
@@ -170,7 +170,7 @@
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-4">
   <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input">
               </label>
-              </td>  
+              </td>
 
               <td>
                 <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
@@ -190,7 +190,7 @@
       <button type="button" class="mdl-button close">Calcelar</button>
 
   </dialog>
-  
+
 
   <script>
     var dialog = document.querySelector('dialog');
